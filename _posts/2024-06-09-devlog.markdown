@@ -1,0 +1,24 @@
+---
+title: Devlog - LineageOS
+date: 2024-06-09
+tags: [devlog, lineageos]
+---
+
+# Devlog: 2024-06-09
+
+## LineageOS
+My first project this weekend was flashing my 3 year old [Samsung S6 Lite](https://www.samsung.com/levant/business/tablets/galaxy-tab-s/galaxy-tab-s6-lite-wifi-sm-p613nzaamid/) with [LineageOS](https://lineageos.org). Lineage is an open source android distro, forked from the now-defunct [Cyanogen Mod](https://en.wikipedia.org/wiki/CyanogenMod). They claim to minimize things like OS bloat and tracking and maximize personalization and performance. I went to it because the tablet was running Samsung's incredibly bloated and intrusive One UI distro. It adds piles of useless features which seem clearly intended to convince you to share more data with them. These include voice assistants, calendars, SMS apps, and a bunch of other things which are basically duplicates of what Google offers. At some point, they also opted me in to a bunch of data collection they added even after I'd meticulously gone through the settings and turned it all off previously. The last straw for me was when the tablet began slowing down to the point of unusability. I didn't get to the point of installing diagnostic tools, but it felt like CPU was maxing out - responsiveness dropped off, the internet frequently slowed to a crawl, the pen I use with it was even slowing down. I could probably have spent some time debugging and trying to fix it, but I didn't feel like wasting my time cleaning up Samsung's mess, especially because EoL is approaching for this model and I'd have to do something about this anyways.
+
+So far, Lineage seems to be a massive success. I installed it with the google apps addon, so I still have access to the play store. This isn't great for the privacy side, but I prefer getting apps from the play store because (for all its faults) I think Google will provide better security than the open source alternatives. All the apps I use are working just fine, including streaming and my e-book reader. The tablet is back to being fully responsive, and I haven't had any glitches thus far. I can use the pen for journalling and it doesn't have the responsiveness and precision glitches I had with the Samsung OS even before it became unusable.
+
+## Obsidian Hacking
+
+I'm a huge fan of [Obsidian](https://obsidian.md/) for note taking. I used to use (Joplin)[https://joplinapp.org/], but I found Obsidian had a richer plugin environment and a slicker UI on both desktop and mobile. That said, I hadn't fully explored said plugin environment, but I figured it was time to do that. Obsidian is now set up to be my daily planner and long-term goal tracker, using the following arrangement:
+
+* [Kanban](https://github.com/mgmeyers/obsidian-kanban) - Let's me track progress on various projects, I have a few boards for different purposes.
+* [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) - lets me define and collect tasks on as many notes as I like
+* [Day Planner](https://github.com/ivan-lednev/obsidian-day-planner) - syncs with my personal calendars and tasks that I define on my daily notes using the Tasks plugin
+* [Dataview](https://blacksmithgu.github.io/obsidian-dataview/) - this one is WILD. It takes tags, properties, and other metadata and lets you query it in code blocks.
+
+I bring these all together by enabling the 'Daily Notes' core plugin in Obsidian. It's based on a template that links to all the boards and open tasks I have open using dataview to query them by property. It also syncs with the day planner and prompts me with a list of tasks. Every day, I can log in, scan what I have queued up to do, and write down a list of tasks I plan to do for the day. These include chores, projects, and 'fun stuff'. Doing this helps me with motivation - I struggle to get anything done due to ADHD and general malaise, but once I have a plan I'm engaging with, it's much easier to summon the energy to actually get things done. I've only been doing this for a few days, but so far I see marked improvement - hopefully it holds up.
+

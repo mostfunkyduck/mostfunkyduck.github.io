@@ -21,18 +21,38 @@
 title: Jack's Blog
 description: >- # this means to ignore newlines until "baseurl:"
   I write here about stuff.
+breadcrumbs: true
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mostfunkyduck.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
 github_username: mostfunkyduck
 mastodon:
 - username: funkyduck
   instance: fosstodon.org
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+
+minimal_mistakes_skin: "neon"
+timezone: America/New_York
+defaults:
+  # _posts
+  - values:
+      layout: single
+      author_profile: true
+      read_time: true
+      related: true
+
+  - scope:
+      path: "/posts"
+      type: posts
+    values:
+      layout: posts
+      author_profile: true
+      related: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +73,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+author:
+  name             : Jack Kuperman
+  avatar           : "/assets/images/avatar.png"
+  bio              : "Software dude, cloud guy, devops man"
